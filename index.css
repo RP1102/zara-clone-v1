@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300;600&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-weight: 300;
+    font-family: 'Dosis', sans-serif;
+}
+body{
+    height: 100%;
+    width: 100%;
+
+}
+
+button{
+    cursor: pointer;
+    transition: transform ease-in-out .15s;
+}
+button:hover{transform: scale(1.2);}
+
+.wrapper{
+    height: 100%;
+    width: 100%;
+    position: relative;
+
+}
+
+/* POUR LE HEADER FIXED */
+.fixedStuff{
+    z-index: 2;
+    position: fixed;
+    display: flex;
+    padding: 20px 40px;
+    width: 100%;
+    justify-content: space-between;
+}
+.headerLeft{
+    display: flex;
+    gap: 5vw;
+}
+.menuBtn{
+    box-sizing: border-box;
+    height: 16px;
+    width: 15px;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    justify-content: space-between;
+
+}
+.menuBtn span{
+    background-color: black;
+    height: 1px;
+    width: 20px;
+}
+#zara{
+    height: 7vw;
+}
+
+.headerRight{
+    display: flex;
+    gap: 2vw;
+}
+.headerRight .search{
+    margin-right: 2vw;
+    padding-right: 20px;
+    font-weight: 600;
+    border-bottom: 1px solid black;
+    width: fit-content;
+    height: fit-content;
+}
+/* -------------------------------- */
+
+
+/* LES BOUTONS DE DIFFILEMENTS HORIZONTAL */
+
+.horitontal-translate-btns{
+    z-index: 1;
+    position: fixed;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.horitontal-translate-btns button{
+    border: none;
+    background-color: transparent;
+    width: fit-content;
+    padding: 5px 10px;
+
+}
+.horitontal-translate-btns button img{
+    transition: opacity ease-in-out .15s;
+}
+.horitontal-translate-btns button:disabled,
+.horitontal-translate-btns button[disabled] img{
+    opacity: 50%;
+}
+
+/* ------------------------------------ */
+
+.subwrapper{
+    position: relative;
+    overflow: hidden;
+}
+
+
+.content{
+    height: 100%;
+    width: 400%;
+    display: flex;
+
+    transition: transform ease-out 0.5s;
+}
+
+.part{
+    height: 400%;
+    width: 25%;
+    overflow: hidden;
+
+}
+
+.empty{
+    position: relative;
+}
+.empty h1{
+    position: absolute;
+    left: 50%;
+    top: 12%;
+    transform: translate(-50%,24%);
+}
+.vertical-carousel-btns{
+    z-index: 1;
+    position: absolute;
+    display: flex;
+    align-items: flex-end;
+    height: 25%;
+    gap: 20px;
+    right: 40px;
+    padding-bottom: 20px;
+}
+.upBtn{border: none; background-color: transparent;cursor: pointer;}
+.downBtn{border: none; background-color: transparent;cursor: pointer;}
+.upBtn img{
+    transform: rotate(90deg);
+}
+.downBtn img{
+    transform: rotate(90deg);
+}
+.upBtn:disabled img{
+    opacity: 50%;
+}
+.downBtn:disabled img{
+    opacity: 50%;
+}
+
+.vertical-carousel{
+    position: relative;
+    transition: transform ease-out 0.5s;
+}
+
+/* POUR LA PARTIE FEMME */
+.part .vert-part-wo{
+    height: 25%;
+}
+
+.vert-part-wo:nth-child(1){
+    background-image: url('assets/images/woman1.jpg');
+    background-position: center;
+    background-size: cover;
+}
+.vert-part-wo:nth-child(2){
+    background-image: url('assets/images/woman2.jpg');
+    background-position: center;
+    background-size: cover;
+}
+.vert-part-wo:nth-child(3){
+    background-image: url('assets/images/woman3.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+/* ---------------------------------- */
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 100px;
+    align-items: center;
+}
+
+.footer ul{
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+.footer .socials{font-size: 11px;}
+.footer .informations{font-size: 9px;}
+
+/* POUR LES HOMMES */
+.part .vert-part-kid{
+    height: 25%;
+}
+
+.vert-part-kid:nth-child(1){
+    background-image: url('assets/images/kid3.jpg');
+    background-position: center;
+    background-size: cover;
+}
+.vert-part-kid:nth-child(2){
+    background-image: url('assets/images/kid2.jpg');
+    background-position: center;
+    background-size: cover;
+}
+.vert-part-kid:nth-child(3){
+    background-image: url('assets/images/kid1.jpg');
+    background-position: center;
+    background-size: cover;
+}
